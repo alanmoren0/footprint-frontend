@@ -1,6 +1,5 @@
 <template>
   <NavBar/>
-
   <section class="mainScreen">
     <div class="s1">
       <h1>Comienza la aventura</h1>
@@ -17,21 +16,27 @@
     </div>
   </section>
 
+  <!--<Problems/>-->
 
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
+//import Problems from "./components/Problems.vue"
 
 export default {
   name: "App",
   components: {
-    NavBar,
+    NavBar
+    //Problems
   },
 };
 </script>
 
 <style>
+  body{
+    margin: 0;
+  }
   template{
     padding: 0;
   }
@@ -48,8 +53,10 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
+  height: 85vh;
 }
 h1{
+  margin: 0;
   color: white;
   font-size: 30px;
 }h2{
@@ -64,6 +71,25 @@ input{
   font-size: 25px;
   text-align: center;
 }
+
+button{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border-color: transparent;
+  background-color: #5C39BE;
+  color: white;
+  font-size: 15px;
+  cursor:pointer;
+  margin-bottom: 10px;
+}
+button:hover{
+  width: 81px;
+  height: 81px;
+}
+</style>
+
+<style scoped>
 img{
   max-width: 15%;
   animation: egg 2s ease-in-out infinite;
@@ -104,20 +130,5 @@ img:hover{
       transform: rotate(5deg);
     }
     
-}
-button{
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  border-color: transparent;
-  background-color: #5C39BE;
-  color: white;
-  font-size: 15px;
-  cursor:pointer;
-  margin-bottom: 10px;
-}
-button:hover{
-  width: 81px;
-  height: 81px;
 }
 </style>
